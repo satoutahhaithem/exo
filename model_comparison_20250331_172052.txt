@@ -1,0 +1,18 @@
+Model Performance Comparison
+===========================
+
++--------------+-------------------+-------------------+-------------------+-----------+---------------------+
+| Model        |   Avg Latency (s) |   Min Latency (s) |   Max Latency (s) |   Std Dev |   Avg Output Length |
++==============+===================+===================+===================+===========+=====================+
+| llama-3.2-1b |             29.56 |             29.56 |             29.56 |    nan    |              2123   |
++--------------+-------------------+-------------------+-------------------+-----------+---------------------+
+| mistral-7b   |              2.35 |              2.33 |              2.37 |      0.03 |              1773.5 |
++--------------+-------------------+-------------------+-------------------+-----------+---------------------+
+
+Benchmark conducted on: 2025-03-31 17:26:27
+Number of runs per model-prompt combination: 1
+Prompts used: 2
+
+Prompts:
+1. Explain the concept of artificial intelligence in simple terms.
+2. Write a short poem about technology.
