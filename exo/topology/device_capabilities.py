@@ -186,16 +186,24 @@ async def linux_device_capabilities() -> DeviceCapabilities:
     handle = pynvml.nvmlDeviceGetHandleByIndex(0)
     gpu_raw_name = pynvml.nvmlDeviceGetName(handle).upper()
     gpu_name = gpu_raw_name.rsplit(" ", 1)[0] if gpu_raw_name.endswith("GB") else gpu_raw_name
-    gpu_memory_info = pynvml.nvmlDeviceGetMemoryInfo(handle)
-
-    if DEBUG >= 2: print(f"NVIDIA device {gpu_name=} {gpu_memory_info=}")
+    try:
+        gpu_memory_info = pynvml.nvmlDeviceGetMemoryInfo(handle)
+    except pynvml.NVMLError as e:
+        print("Skipping GPU memory info: NVML not supported on Jetson.")
+        gpu_memory_info = None
+        if DEBUG >= 2: print(f"NVIDIA device {gpu_name=} {gpu_memory_info=}")
 
     pynvml.nvmlShutdown()
+    # Use a fallback if gpu_memory_info is None
+    if gpu_memory_info is None:
+        total_memory = psutil.virtual_memory().total // 2**20
+    else:
+        total_memory = gpu_memory_info.total // 2**20
 
     return DeviceCapabilities(
       model=f"Linux Box ({gpu_name})",
       chip=gpu_name,
-      memory=gpu_memory_info.total // 2**20,
+      memory=total_memory,
       flops=CHIP_FLOPS.get(gpu_name, DeviceFlops(fp32=0, fp16=0, int8=0)),
     )
   elif Device.DEFAULT == "AMD":
@@ -292,3 +300,12 @@ def windows_device_capabilities() -> DeviceCapabilities:
       memory=psutil.virtual_memory().total // 2**20,
       flops=DeviceFlops(fp32=0, fp16=0, int8=0),
     )
+
+import platform
+def push_to_github():
+    # Only push when running on a Jetson device
+    if 'jetson' in platform.node().lower():
+        print("Jetson detected: pushing changes to GitHub")
+        subprocess.run("git add . && git commit -m 'Update from Jetson' && git push", shell=True)
+    else:
+        print("Not on Jetson device, skipping git push")
