@@ -6,11 +6,10 @@ This document provides instructions for using the enhanced metrics benchmarking 
 
 The enhanced benchmarking script now includes the following metrics:
 
-1. **Memory Usage**: Tracks RAM consumption during model execution
-2. **Time to First Token**: Measures how quickly the model begins generating output
-3. **Token/Character Usage**: Counts output length in characters, words, and estimated tokens
-4. **Tokens Per Second**: Calculates throughput rate
-5. **Quality Evaluation**: Tests models on specific task types (reasoning, creativity, knowledge, instruction)
+1. **Time to First Token**: Measures how quickly the model begins generating output
+2. **Token/Character Usage**: Counts output length in characters, words, and estimated tokens
+3. **Tokens Per Second**: Calculates throughput rate
+4. **Quality Evaluation**: Tests models on specific task types (reasoning, creativity, knowledge, instruction)
 
 Standard deviation has been removed from the metrics as requested.
 

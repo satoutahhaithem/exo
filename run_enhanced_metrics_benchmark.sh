@@ -16,7 +16,7 @@ chmod +x enhanced_metrics_benchmark.py
 # Run the enhanced benchmark with default settings
 echo "Running enhanced metrics benchmarks for all models..."
 echo "This may take some time depending on your hardware and the models being tested."
-python enhanced_metrics_benchmark.py
+python enhanced_metrics_benchmark.py --models llama-3.2-1b mistral-7b --runs 1
 
 # Check if results were generated
 if [ -f "enhanced_benchmark_results_*.csv" ]; then

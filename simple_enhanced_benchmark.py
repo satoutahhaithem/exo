@@ -9,7 +9,7 @@ from datetime import datetime
 
 # List of models to benchmark
 DEFAULT_MODELS = [
-    "llama-3.1-8b",
+    # "llama-3.1-8b",
     "llama-3.2-1b",
     "mistral-7b",
     "qwen-1.5-7b",

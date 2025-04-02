@@ -1,5 +1,0 @@
-model,prompt,run,latency,output_length,success
-llama-3.2-1b,Explain the concept of artificial intelligence in simple terms.,1,300.0,0,False
-llama-3.2-1b,Write a short poem about technology.,1,29.5569167137146,2123,True
-mistral-7b,Explain the concept of artificial intelligence in simple terms.,1,2.3692381381988525,1770,True
-mistral-7b,Write a short poem about technology.,1,2.333036422729492,1777,True

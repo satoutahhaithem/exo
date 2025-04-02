@@ -6,7 +6,7 @@ import os
 # Models to test
 MODELS = [
     "llama-3.2-1b",  # Smaller model to start with
-    "llama-3.1-8b",
+    # "llama-3.1-8b",
     "mistral-7b"
 ]
 

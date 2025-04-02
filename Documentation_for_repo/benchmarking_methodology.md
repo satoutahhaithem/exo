@@ -8,27 +8,27 @@ The following metrics will be collected for each model:
 
 ### 1. Inference Latency
 
-**Definition**: The total time taken from submitting a prompt to receiving the complete response.
+Definition: The total time taken from submitting a prompt to receiving the complete response.
 
-**Measurement**: Measured in seconds, from the start of encoding the prompt to the completion of decoding the response.
+Measurement: Measured in seconds, from the start of encoding the prompt to the completion of decoding the response.
 
-**Significance**: Lower latency indicates faster response time, which is critical for interactive applications.
+Significance: Lower latency indicates faster response time, which is critical for interactive applications.
 
 ### 2. Memory Usage
 
-**Definition**: The additional memory consumed during model inference.
+Definition: The additional memory consumed during model inference.
 
-**Measurement**: Measured in megabytes (MB), calculated as the difference between memory usage before and after model inference.
+Measurement: Measured in megabytes (MB), calculated as the difference between memory usage before and after model inference.
 
-**Significance**: Lower memory usage allows for more efficient resource utilization and potentially running larger models or multiple models simultaneously.
+Significance: Lower memory usage allows for more efficient resource utilization and potentially running larger models or multiple models simultaneously.
 
 ### 3. Tokens Per Second (TPS)
 
-**Definition**: The rate at which the model can generate output tokens.
+Definition: The rate at which the model can generate output tokens.
 
-**Measurement**: Calculated by dividing the number of output tokens by the total inference time.
+Measurement: Calculated by dividing the number of output tokens by the total inference time.
 
-**Significance**: Higher TPS indicates better throughput, which is important for batch processing or handling multiple requests.
+Significance: Higher TPS indicates better throughput, which is important for batch processing or handling multiple requests.
 
 ## Test Prompts
 
@@ -62,16 +62,16 @@ All benchmarks will be run on the same node with the following specifications:
 
 ## Testing Procedure
 
-1. **Preparation**:
+1. Preparation:
    - Install exo and dependencies
    - Download all models before benchmarking to eliminate download time from measurements
 
-2. **Execution**:
+2. Execution:
    - Run each model with each prompt
    - Measure latency, memory usage, and calculate TPS
    - Record all metrics and model outputs
 
-3. **Analysis**:
+3. Analysis:
    - Calculate average metrics across all prompts for each model
    - Generate visualizations comparing model performance
    - Identify performance patterns and bottlenecks

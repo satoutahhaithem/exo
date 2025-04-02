@@ -16,8 +16,8 @@ chmod +x simple_enhanced_benchmark.py
 # Run the enhanced benchmark with a smaller test set for quick testing
 echo "Running simple enhanced benchmarks for testing..."
 echo "This will test with a limited set of models and prompts for quick verification."
-python simple_enhanced_benchmark.py --models llama-3.1-8b llama-3.2-1b mistral-7b qwen-1.5-7b deepseek-r1 --runs 1
-# python simple_enhanced_benchmark.py --models llama-3.2-1b mistral-7b --runs 1
+# python simple_enhanced_benchmark.py --models llama-3.1-8b llama-3.2-1b mistral-7b qwen-1.5-7b deepseek-r1 --runs 1
+python simple_enhanced_benchmark.py --models llama-3.2-1b mistral-7b --runs 1
 
 # Check if results were generated
 if [ -f "benchmark_results_*.csv" ]; then

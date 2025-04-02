@@ -11,7 +11,7 @@ from datetime import datetime
 
 # List of models to benchmark
 DEFAULT_MODELS = [
-    "llama-3.1-8b",
+    # "llama-3.1-8b",
     "llama-3.2-1b",
     "mistral-7b",
     "qwen-1.5-7b",
@@ -47,9 +47,6 @@ class EnhancedBenchmark:
         """Benchmark a single model with a single prompt."""
         print(f"\n===== Testing {model} (Run {run_number}/{self.runs}) =====")
         print(f"Prompt: {prompt[:50]}...")
-        
-        # Measure memory before
-        mem_before = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
         
         # Start timing for total latency
         start_time = time.time()
@@ -108,10 +105,6 @@ class EnhancedBenchmark:
             if not first_token_detected:
                 first_token_time = total_latency
             
-            # Measure memory after
-            mem_after = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
-            memory_usage = mem_after - mem_before
-            
             # Calculate token/character metrics
             output_length = len(output)
             word_count = len(output.split())
@@ -122,7 +115,6 @@ class EnhancedBenchmark:
             
             print(f"Total latency: {total_latency:.2f} seconds")
             print(f"Time to first token: {first_token_time:.2f} seconds")
-            print(f"Memory usage: {memory_usage:.2f} MB")
             print(f"Output length: {output_length} characters, {word_count} words")
             print(f"Estimated tokens: {token_count:.0f}, {tokens_per_second:.2f} tokens/sec")
             print(f"First 100 chars of output: {output[:100]}...")
@@ -134,7 +126,6 @@ class EnhancedBenchmark:
                 'run': run_number,
                 'total_latency': total_latency,
                 'first_token_time': first_token_time,
-                'memory_usage': memory_usage,
                 'output_length': output_length,
                 'word_count': word_count,
                 'token_count': token_count,
@@ -159,7 +150,6 @@ class EnhancedBenchmark:
                 'run': run_number,
                 'total_latency': self.timeout,
                 'first_token_time': self.timeout,
-                'memory_usage': 0,
                 'output_length': 0,
                 'word_count': 0,
                 'token_count': 0,
@@ -183,7 +173,6 @@ class EnhancedBenchmark:
                 'run': run_number,
                 'total_latency': 0,
                 'first_token_time': 0,
-                'memory_usage': 0,
                 'output_length': 0,
                 'word_count': 0,
                 'token_count': 0,
@@ -222,8 +211,13 @@ class EnhancedBenchmark:
     
     def save_results(self, filename=None):
         """Save benchmark results to a CSV file."""
+        # Create output folder for results
+        output_folder = "results"
+        if not os.path.exists(output_folder):
+            os.makedirs(output_folder)
+        
         if not filename:
-            filename = f"enhanced_benchmark_results_{self.timestamp}.csv"
+            filename = os.path.join(output_folder, f"enhanced_benchmark_results_{self.timestamp}.csv")
         
         df = pd.DataFrame(self.results)
         df.to_csv(filename, index=False)
@@ -249,7 +243,6 @@ class EnhancedBenchmark:
         model_metrics = df_success.groupby("model").agg({
             "total_latency": "mean",
             "first_token_time": "mean",
-            "memory_usage": "mean",
             "output_length": "mean",
             "token_count": "mean",
             "tokens_per_second": "mean"
@@ -270,7 +263,6 @@ class EnhancedBenchmark:
                 "Model": row["model"],
                 "Total Latency (s)": row["total_latency"],
                 "First Token (s)": row["first_token_time"],
-                "Memory (MB)": row["memory_usage"],
                 "Avg Output Len": row["output_length"],
                 "Avg Tokens": row["token_count"],
                 "Tokens/Second": row["tokens_per_second"]
@@ -281,8 +273,13 @@ class EnhancedBenchmark:
         print("\nModel Performance Comparison:")
         print(table_str)
         
+        # Create output folder for tables
+        output_folder = "results_benchmarking"
+        if not os.path.exists(output_folder):
+            os.makedirs(output_folder)
+        
         # Save the table to a file
-        table_file = f"enhanced_model_comparison_{self.timestamp}.txt"
+        table_file = os.path.join(output_folder, f"enhanced_model_comparison_{self.timestamp}.txt")
         with open(table_file, "w") as f:
             f.write("Enhanced Model Performance Comparison\n")
             f.write("===================================\n\n")
@@ -336,7 +333,11 @@ class EnhancedBenchmark:
         pivot_table = quality_metrics.pivot(index="model", columns="prompt_type", values=["total_latency", "output_length", "token_count"])
         
         # Format and save the table
-        quality_table_file = f"quality_evaluation_{self.timestamp}.txt"
+        output_folder = "results"
+        if not os.path.exists(output_folder):
+            os.makedirs(output_folder)
+        
+        quality_table_file = os.path.join(output_folder, f"quality_evaluation_{self.timestamp}.txt")
         with open(quality_table_file, "w") as f:
             f.write("Quality Evaluation Results by Task Type\n")
             f.write("=====================================\n\n")
