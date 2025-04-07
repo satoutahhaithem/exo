@@ -1,0 +1,328 @@
+Starting enhanced benchmarks...
+
+===== Testing llama-3.2-1b (Run 1/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 2.92 seconds
+Time to first token: 2.55 seconds
+Output length: 1753 characters, 123 words
+Estimated tokens: 160, 54.68 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing llama-3.2-1b (Run 2/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 3.22 seconds
+Time to first token: 2.93 seconds
+Output length: 1760 characters, 124 words
+Estimated tokens: 161, 50.00 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing llama-3.2-1b (Run 3/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 2.68 seconds
+Time to first token: 2.37 seconds
+Output length: 1767 characters, 125 words
+Estimated tokens: 162, 60.74 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing llama-3.2-1b (Run 1/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 2.61 seconds
+Time to first token: 2.31 seconds
+Output length: 1747 characters, 123 words
+Estimated tokens: 160, 61.28 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing llama-3.2-1b (Run 2/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 2.65 seconds
+Time to first token: 2.35 seconds
+Output length: 1754 characters, 124 words
+Estimated tokens: 161, 60.85 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing llama-3.2-1b (Run 3/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 2.68 seconds
+Time to first token: 2.38 seconds
+Output length: 1761 characters, 125 words
+Estimated tokens: 162, 60.62 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing mistral-7b (Run 1/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 1.45 seconds
+Time to first token: 1.19 seconds
+Output length: 1408 characters, 85 words
+Estimated tokens: 110, 76.41 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing mistral-7b (Run 2/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 1.42 seconds
+Time to first token: 1.16 seconds
+Output length: 1415 characters, 86 words
+Estimated tokens: 112, 78.76 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing mistral-7b (Run 3/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 1.41 seconds
+Time to first token: 1.15 seconds
+Output length: 1422 characters, 87 words
+Estimated tokens: 113, 80.27 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing mistral-7b (Run 1/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 1.42 seconds
+Time to first token: 1.16 seconds
+Output length: 1429 characters, 88 words
+Estimated tokens: 114, 80.84 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing mistral-7b (Run 2/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 1.41 seconds
+Time to first token: 1.15 seconds
+Output length: 1436 characters, 89 words
+Estimated tokens: 116, 81.83 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing mistral-7b (Run 3/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 1.41 seconds
+Time to first token: 1.15 seconds
+Output length: 1443 characters, 90 words
+Estimated tokens: 117, 83.05 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing qwen-1.5-7b (Run 1/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 1.45 seconds
+Time to first token: 1.18 seconds
+Output length: 1451 characters, 91 words
+Estimated tokens: 118, 81.67 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing qwen-1.5-7b (Run 2/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 1.41 seconds
+Time to first token: 1.15 seconds
+Output length: 1458 characters, 92 words
+Estimated tokens: 120, 84.99 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing qwen-1.5-7b (Run 3/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 1.41 seconds
+Time to first token: 1.15 seconds
+Output length: 1465 characters, 93 words
+Estimated tokens: 121, 85.68 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing qwen-1.5-7b (Run 1/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 1.41 seconds
+Time to first token: 1.15 seconds
+Output length: 1472 characters, 94 words
+Estimated tokens: 122, 86.42 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing qwen-1.5-7b (Run 2/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 1.41 seconds
+Time to first token: 1.16 seconds
+Output length: 1479 characters, 95 words
+Estimated tokens: 124, 87.48 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing qwen-1.5-7b (Run 3/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 1.42 seconds
+Time to first token: 1.16 seconds
+Output length: 1486 characters, 96 words
+Estimated tokens: 125, 87.93 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing deepseek-r1 (Run 1/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 1.42 seconds
+Time to first token: 1.17 seconds
+Output length: 1486 characters, 96 words
+Estimated tokens: 125, 87.60 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing deepseek-r1 (Run 2/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 1.41 seconds
+Time to first token: 1.16 seconds
+Output length: 1486 characters, 96 words
+Estimated tokens: 125, 88.27 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing deepseek-r1 (Run 3/3) =====
+Prompt: Explain the concept of artificial intelligence in ...
+Total latency: 1.43 seconds
+Time to first token: 1.17 seconds
+Output length: 1486 characters, 96 words
+Estimated tokens: 125, 87.55 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing deepseek-r1 (Run 1/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 1.43 seconds
+Time to first token: 1.17 seconds
+Output length: 1486 characters, 96 words
+Estimated tokens: 125, 87.39 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing deepseek-r1 (Run 2/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 1.45 seconds
+Time to first token: 1.17 seconds
+Output length: 1486 characters, 96 words
+Estimated tokens: 125, 86.00 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+===== Testing deepseek-r1 (Run 3/3) =====
+Prompt: Write a short poem about technology....
+Total latency: 1.45 seconds
+Time to first token: 1.17 seconds
+Output length: 1486 characters, 96 words
+Estimated tokens: 125, 86.09 tokens/sec
+First 100 chars of output: Selected inference engine: None
+[93m
+  _____  _____  
+ / _ \ \/ / _ \ 
+|  __/>  < (_) |
+ \___/_/\_\...
+
+Results saved to results/enhanced_benchmark_results_20250407_160533.csv
+
+Model Performance Comparison:
++--------------+---------------------+-------------------+------------------+--------------+-----------------+
+| Model        |   Total Latency (s) |   First Token (s) |   Avg Output Len |   Avg Tokens |   Tokens/Second |
++==============+=====================+===================+==================+==============+=================+
+| deepseek-r1  |                1.43 |              1.17 |           1486   |       124.8  |           87.15 |
++--------------+---------------------+-------------------+------------------+--------------+-----------------+
+| llama-3.2-1b |                2.79 |              2.48 |           1757   |       161.2  |           58.03 |
++--------------+---------------------+-------------------+------------------+--------------+-----------------+
+| mistral-7b   |                1.42 |              1.16 |           1425.5 |       113.75 |           80.2  |
++--------------+---------------------+-------------------+------------------+--------------+-----------------+
+| qwen-1.5-7b  |                1.42 |              1.16 |           1468.5 |       121.55 |           85.7  |
++--------------+---------------------+-------------------+------------------+--------------+-----------------+

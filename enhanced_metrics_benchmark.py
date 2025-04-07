@@ -291,7 +291,7 @@ class EnhancedBenchmark:
             # Add prompt details
             f.write("\n\nStandard Prompts:\n")
             for i, prompt in enumerate(self.prompts):
-                f.write(f"{i+1}. {prompt}\n")
+                f.writed(f"{i+1}. {prompt}\n")
             
             # Add quality evaluation details if used
             if self.quality_eval:

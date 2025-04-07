@@ -5,7 +5,7 @@
 mkdir -p jetson
 
 # Run the Python script and direct all output to jetson/benchmark
-python3 enhanced_metrics_benchmark.py > jetson/benchmark
+python3 enhanced_metrics_benchmark.py > jetson/benchmark_jetson
 
 # Optional: Show a message indicating where the output was saved
 echo "Output saved to jetson/benchmark"
